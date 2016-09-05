@@ -1,0 +1,27 @@
+web:
+  hostname: web-server
+  container_name: web-server
+  build: ./web/
+  command: python web.py
+  ports:
+   - "5000:5000"
+  links:
+   - mysql
+scraper:
+  hostname: scraper-server
+  container_name: scraper-server
+  build: ./scraper/
+  command: python scraper.py
+  links:
+   - mysql
+mysql:
+  hostname: mysql-server
+  container_name: mysql-db
+  image: mysql:latest
+  ports:
+    - "3306:3306"
+  environment:
+    MYSQL_ROOT_PASSWORD: 123456
+    MYSQL_USER: dev
+    MYSQL_PASSWORD: 123456
+    MYSQL_DATABASE: cross_engage
