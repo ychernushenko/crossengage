@@ -17,7 +17,8 @@ access_token_secret = "ClHRnNAQZ1MPOqujMpKXWtzQxABPQz7aeEchk1MgtY2aS"
 consumer_key = "17ajP3edxCEtj1AV2vTtXGNKK"
 consumer_secret = "XvucvItWMkTgQEm7O5Y0oiCjhMRNIqDvzEoLSKR69G2Fv6uLDQ"
 
-search_list = ['python', 'java', 'javascript', 'rust', 'elexir']
+# Enter yourkeywords here
+search_list = ['C++', 'python', 'java', 'javascript', 'rust', 'elexir']
 
 class Counter(db.Model):
 	__tablename__ = "counter"
